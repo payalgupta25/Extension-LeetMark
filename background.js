@@ -1,6 +1,7 @@
 // chrome.action.onClicked.addListener(() => {
 //   chrome.tabs.create({ url: chrome.runtime.getURL("page.html") });
 // });
+importScripts('config.js');
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "generateMarkdown") {
     const { title, code } = message;
@@ -26,7 +27,7 @@ ${code}
     `.trim();
     const apiKey = CONFIG.API_KEY;
 
-    fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`, {
+    fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAqp-kUY8SUXs_Tah7xPgzXjd67sYwyMpk`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -37,6 +38,8 @@ ${code}
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log("Gemini API Response:", data);
+        
         const markdown = data?.candidates?.[0]?.content?.parts?.[0]?.text || "Error generating markdown.";
         sendResponse({ markdown });
       })

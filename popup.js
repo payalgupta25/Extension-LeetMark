@@ -26,12 +26,15 @@ generateBtn.addEventListener("click", async () => {
   const code = codeArea.value;
   const title = problemName.textContent;
 
+
   try {
     const response = await chrome.runtime.sendMessage({
       action: "generateMarkdown",
       code,
       title
     });
+    console.log("Response from background script:", response);
+    
 
     if (response && response.markdown) {
       outputArea.value = response.markdown;
