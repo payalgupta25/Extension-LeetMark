@@ -1,0 +1,226 @@
+/* body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fb;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+
+#container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: monospace;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+textarea#code {
+  height: 100px;
+}
+
+textarea#output {
+  background-color: #f0f0f0;
+  height: 160px;
+  font-size: 13px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    width: 450px;
+    padding: 20px;
+    background: #f9f9f9;
+  }
+
+  textarea {
+    width: 100%;
+    height: 220px;
+    resize: vertical;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  #previewArea {
+    margin-top: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 300px;
+  }
+
+  button {
+    margin-top: 10px;
+    margin-right: 10px;
+  } */
+
+
+  /* General dark background and base text color */
+body {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  padding: 16px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #ffffff;
+  border-bottom: 1px solid #333;
+  padding-bottom: 4px;
+  margin-top: 20px;
+}
+
+/* Paragraphs and list items */
+p, li {
+  color: #c9d1d9;
+  line-height: 1.6;
+}
+
+/* Code block look (inside textarea) */
+textarea {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Optional: match code preview style */
+pre, code {
+  background-color: #252526;
+  color: #dcdcdc;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 14px;
+  overflow-x: auto;
+  display: block;
+  margin-top: 12px;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+/* Optional link styles */
+a {
+  color: #569cd6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 10px;
+  width: 500px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+b {
+  color: #f0f0f0;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  border: 1px solid #555;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
+  border-radius: 5px;
+  resize: vertical;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: #272727;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #333333;
+}
+
+button img {
+  width: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+}

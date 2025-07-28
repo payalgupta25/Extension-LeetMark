@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeetCode → Markdown</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="marked.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <h2>LeetCode → Markdown</h2>
+
+    <p><strong>Problem:</strong> <span id="problem-name">(auto-filled)</span></p>
+
+    <button id="paste-code">📋 Paste Code</button>
+    <textarea id="code" placeholder="Your code will appear here..." rows="8"></textarea>
+
+    <button id="generate">⚙️ Generate with Gemini</button>
+    <textarea id="output" readonly rows="14" placeholder="Generated markdown will appear here..."></textarea>
+
+    <button id="copy">📎 Copy Markdown</button>
+    <button id="preview">👀 Preview Markdown</button>
+    <div id="previewArea" style="display:none;"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
