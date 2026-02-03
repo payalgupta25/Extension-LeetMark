@@ -1,226 +1,137 @@
-/* body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f9fb;
-  color: #333;
+:root {
+  --bg-main: #0b0d10;
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+
+  --text-main: #e8e8e8;
+  --text-muted: #a1a1a6;
+
+  --control-bg: rgba(255, 255, 255, 0.08);
+  --control-border: rgba(255, 255, 255, 0.15);
+}
+
+body {
   margin: 0;
-  padding: 0;
-  width: 300px;
+  padding: 14px;
+  width: 480px;
+  background: radial-gradient(
+    1200px 400px at top,
+    #141722,
+    #090b0e
+  );
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Inter, system-ui, sans-serif;
 }
 
 #container {
-  padding: 16px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px) saturate(130%);
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 h2 {
-  margin-top: 0;
-  font-size: 18px;
-  color: #2c3e50;
+  margin: 0;
   text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #ffffff;
 }
 
-textarea,
-input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-family: monospace;
-  resize: vertical;
-  box-sizing: border-box;
+p {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--text-muted);
 }
 
-textarea#code {
-  height: 100px;
-}
-
-textarea#output {
-  background-color: #f0f0f0;
-  height: 160px;
+textarea {
+  background: var(--control-bg);
+  color: var(--text-main);
+  border: 1px solid var(--control-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 13px;
+  line-height: 1.55;
+  resize: vertical;
+}
+
+textarea::placeholder {
+  color: #8c8c92;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid var(--control-border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 500;
   cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.2s;
+  transition: background 0.15s ease, border 0.15s ease;
 }
 
 button:hover {
-  background-color: #2980b9;
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
-button:disabled {
-  background-color: #bdc3c7;
-  cursor: not-allowed;
+button:active {
+  background: rgba(255, 255, 255, 0.08);
 }
 
-body {
-    font-family: Arial, sans-serif;
-    width: 450px;
-    padding: 20px;
-    background: #f9f9f9;
-  }
-
-  textarea {
-    width: 100%;
-    height: 220px;
-    resize: vertical;
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  #previewArea {
-    margin-top: 15px;
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    overflow-y: auto;
-    max-height: 300px;
-  }
-
-  button {
-    margin-top: 10px;
-    margin-right: 10px;
-  } */
-
-
-  /* General dark background and base text color */
-body {
-  background-color: #1e1e1e;
-  color: #d4d4d4;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  margin: 0;
-  padding: 16px;
-}
-
-/* Headings */
-h1, h2, h3 {
-  color: #ffffff;
-  border-bottom: 1px solid #333;
-  padding-bottom: 4px;
-  margin-top: 20px;
-}
-
-/* Paragraphs and list items */
-p, li {
-  color: #c9d1d9;
+#previewArea {
+  background: rgba(10, 12, 16, 0.75);
+  border: 1px solid var(--control-border);
+  border-radius: 14px;
+  padding: 14px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 13.5px;
   line-height: 1.6;
 }
 
-/* Code block look (inside textarea) */
-textarea {
-  background-color: #1e1e1e;
-  color: #dcdcdc;
-  border: 1px solid #333;
-  border-radius: 6px;
+#previewArea h1,
+#previewArea h2,
+#previewArea h3 {
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 4px;
+}
+
+#previewArea pre {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
   padding: 12px;
-  font-family: 'Fira Code', 'Courier New', monospace;
-  font-size: 14px;
-  width: 100%;
-  box-sizing: border-box;
-  resize: vertical;
 }
 
-/* Optional: match code preview style */
-pre, code {
-  background-color: #252526;
-  color: #dcdcdc;
-  padding: 12px 16px;
-  border-radius: 8px;
-  font-family: 'Fira Code', 'Courier New', monospace;
-  font-size: 14px;
-  overflow-x: auto;
-  display: block;
-  margin-top: 12px;
+#previewArea code {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 2px 6px;
 }
 
-/* Lists */
-ul {
-  padding-left: 20px;
-}
-
-/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #555;
+  background: rgba(255, 255, 255, 0.25);
   border-radius: 4px;
-}
-::-webkit-scrollbar-track {
-  background: #1e1e1e;
-}
-
-/* Optional link styles */
-a {
-  color: #569cd6;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
-  margin: 0;
-  padding: 10px;
-  width: 500px;
-}
-
-h1 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-b {
-  color: #f0f0f0;
-}
-
-textarea {
-  width: 100%;
-  height: 100px;
-  background-color: #1e1e1e;
-  color: #dcdcdc;
-  border: 1px solid #555;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 10px;
-  border-radius: 5px;
-  resize: vertical;
-  margin-bottom: 10px;
-  line-height: 1.4;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  background-color: #272727;
-  color: #e0e0e0;
-  border: 1px solid #444;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.2s ease;
-}
-
-button:hover {
-  background-color: #333333;
-}
-
-button img {
-  width: 16px;
-  vertical-align: middle;
-  margin-right: 5px;
 }
