@@ -43,7 +43,7 @@ LeetMark is a productivity-focused Chrome extension that helps you **instantly c
 - JavaScript (Vanilla)
 - HTML5 & CSS3
 - Chrome Extension APIs
-- Gemini 2.0 API (Google)
+- Groq API (Google)
 
 ---
 
